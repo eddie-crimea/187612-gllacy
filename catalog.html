@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+        <div class="logo-main">
+            <img src="http://placehold.it/150x100" width="150" alt="Лого">
+            <a href="#">Лого-ссылка</a>
+        </div>
+    <nav class="main-navigatiion">
+        <ul class="main-navigation-list">
+            <li class="main-navigation-item">
+                <a href="" class="main-navigation-link">Каталог</a>
+            </li>
+            <li class="main-navigation-item">
+                <a href="" class="main-navigation-link">Доставка и оплата</a>
+            </li>
+            <li class="main-navigation-item">
+                <a href="" class="main-navigation-link">О Компании</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="user-block">
+        <ul class="user-block-list">
+            <li class="user-block-item">
+                <a href="#" class="search-block">Поиск</a>
+            </li>
+            <li class="user-block-item">
+                <a href="#" class="login-block">Вход</a>
+            </li>
+            <li class="user-block-item">
+                <a href="#" class="basket">Корзина</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <div class="info-block">
+        <span class="work-time">С 10 до 20, ежедневно</span>
+    </div>
+    <div class="info-block">
+        <span class="telephone-number">8 812 450-25-25</span>
+    </div>
+  </header>
+  <main class="container">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
+        <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Каталог</a></li>
+        <li class="breadcrumbs-item"><a class="breadcrumbs-link">Сливочное</a></li>
+      </ul>
+    </div>
+    <h1 class="section-titile">Сливочное мороженое</h1>
+    <div class="filter-container">
+      <div class="sort-filter">
+        <span class="sort-name">Сортировка:</span>
+          <ul class="sort-list">
+            <li class="sort-item"><a href="#" class="sort-link">По популярности</a></li>
+          </ul>
+      </div>
+      <div class="price-controls">
+        <span class="price-title">Цена:</span>
+        <input class="min-price" type="text" value="100 руб.">
+        <span class="line">-</span>
+        <input class="max-price" type="text" value="500 руб.">
+      </div>
+      <div class="price-filter">
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="toggle min-toggle"></div>
+            <div class="toggle max-toggle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="radio-filter">
+        <form class="radio-section" action="/echo" method="post">
+          <input class="radio-btn" type="radio" id="first">
+          <label for="first">0%</label>
+          <input class="radio-btn" type="radio" id="second">
+          <label for="second">до 10%</label>
+          <input class="radio-btn" type="radio" id="third">
+          <label for="third">до 30%</label>
+          <input class="radio-btn" type="radio" id="fourth">
+          <label for="fourth">выше 30%</label>
+        </form>
+      </div>
+      <div class="checkbox-filter">
+        <form class="checkbox-section" action="/echo" method="post">
+          <input class="checkbox-field" type="checkbox" name="chocolate" id="choco" checked>
+          <label for="choco">шоколадные</label>
+          <input class="checkbox-field" type="checkbox" name="sugar" id="sugar" checked>
+          <label for="sugar">сахарные присыпки</label>
+          <input class="checkbox-field" type="checkbox" name="fruit" id="fruit">
+          <label for="">фрукты</label>
+          <input class="checkbox-field" type="checkbox" name="syrup" id="syrup">
+          <label for="">сиропы</label>
+          <input class="checkbox-field" type="checkbox" name="jam" id="jam">
+          <label for="">джемы</label>
+          <input class="submit-btn" type="submit" value="Применить">
+        </form>
+      </div>
+
+  </main>
+</body>
+</html>
