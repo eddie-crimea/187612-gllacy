@@ -7,71 +7,109 @@
 <body>
   <header class="main-header">
     <div class="container">
-    <div class="logo-main">
-      <img src="http://placehold.it/150x100" width="150" alt="Лого">
-    </div>
-    <nav class="main-navigatiion">
-      <ul class="main-navigation-list">
-        <li class="main-navigation-item">
-          <a href="" class="main-navigation-link">Каталог</a>
+    <h1 class="logo-main">GlassyShop
+        <img src="http://placehold.it/150x100" width="150" alt="Лого">
+    </h1>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li class="main-nav-item">
+          <div class="catalog-block">
+            <a href="" class="main-nav-link"><span class="dropbtn">Каталог</span></a>
+            <div class="catalog-dropdown">
+              <div class="dropdown-content">
+                <a href="#" class="dropdown-link">Новинки</a>
+                <a href="#" class="dropdown-link">Сливочное</a>
+                <a href="#" class="dropdown-link">Щербеты</a>
+                <a href="#" class="dropdown-link">Фруктовый лед</a>
+                <a href="#" class="dropdown-link">Мелорин</a>
+              </div>
+            </div>
+          </div>
         </li>
-        <li class="main-navigation-item">
-          <a href="" class="main-navigation-link">Доставка и оплата</a>
+        <li class="main-nav-item">
+          <a href="" class="main-nav-link">Доставка и оплата</a>
         </li>
-        <li class="main-navigation-item">
-          <a href="" class="main-navigation-link">О Компании</a>
+        <li class="main-nav-item">
+          <a href="" class="main-nav-link">О Компании</a>
         </li>
       </ul>
     </nav>
     <div class="user-block">
       <ul class="user-block-list">
         <li class="user-block-item">
-          <a href="#" class="search-block">Поиск</a>
+          <div class="search-block">
+            <a href="#" class="search-link">Поиск</a>
+              <div class="search-dropdown">
+                <form class="search-form" action="/echo">
+                  <input type="text" placeholder="Что ищем?" id="search">
+                  <label for="search"></label>
+                </form>
+              </div>
+          </div>
         </li>
         <li class="user-block-item">
-          <a href="#" class="login-block">Вход</a>
+          <div class="login-block">
+            <a href="#" class="login-link">Вход</a>
+            <div class="login-dropdown">
+              <form class="login-form" action="/echo">
+                <input type="text" id="email" placeholder="Электронная почта">
+                <label for="email"></label>
+                <input type="password" id="pass" placeholder="Пароль">
+                <label for="pass"></label>
+                <input type="submit" value="Войти" id="login">
+                <label for="login"></label>
+                <ul class="users-help-list">
+                  <li class="users-help-item">
+                    <a class="users-help-link" href="#">Забыли пароль?</a>
+                  </li>
+                  <li class="users-help-item">
+                    <a class="users-help-link" href="#">Новая регистрация</a>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
         </li>
         <li class="user-block-item">
-          <a href="#" class="basket">Корзина</a>
+          <a href="#" class="basket">Корзина-Пусто</a>
         </li>
       </ul>
     </div>
-    </div>
     <div class="info-block">
       <span class="work-time">С 10 до 20, ежедневно</span>
+      <span class="phone-number">8 812 450-25-25</span>
     </div>
-    <div class="info-block">
-      <span class="telephone-number">8 812 450-25-25</span>
     </div>
   </header>
   <main class="container">
-    <h1 class="main-title">Крем брюле и пломбир с малиновым джемом</h1>
-  <div class="slider">
-    <ul class="slider-list">
-      <li class="slider-item">
-        <a href="#" class="slider-link">slider-page-1</a>
+    <div class="slider">
+     <ul class="slider-pag-list">
+      <li class="slider-pag-item">
+        <img src="http://placehold.it/150x100" alt="icecream">
+        <h2 class="main-title">Крем брюле и пломбир с малиновым джемом</h2>
+        <div class="main-btn">
+          <a href="#" class="get-btn">Давайте оба!</a>
+        </div>
+        <a href="#" class="slider-pag-link">slider-page-1</a>
       </li>
-      <li class="slider-item">
-        <a href="#" class="slider-link">slider-page-2</a>
+      <li class="slider-pag-item">
+        <a href="#" class="slider-pag-link">slider-page-2</a>
       </li>
-      <li class="slider-item">
-        <a href="#" class="slider-link">slider-page-3</a>
+      <li class="slider-pag-item">
+        <a href="#" class="slider-pag-link">slider-page-3</a>
       </li>
     </ul>
   </div>
-  <div class="main-btn">
-    <a href="#" class="get-btn">Давайте оба!</a>
-  </div>
   <div class="banner-contrainer">
-    <section class="left-banner">
+    <section class="banner">
       <h2 class="banner-title">Малинка даром!</h2>
-        <p class="banner-description">При покупке 2 кг любого фруктового мороженного, добавим
+        <p class="banner-desc">При покупке 2 кг любого фруктового мороженного, добавим
         в ваш заказ банку малинового варенья бесплатно.</p>
         <a class="banner-btn" href="#">Хочу варенье!</a>
     </section>
-    <section class="right-banner">
+    <section class="banner">
       <h2 class="banner-title">Шоколадки даром!</h2>
-        <p class="banner-desrciption">При покупке 2 кг пломбира, добавим
+        <p class="banner-desс">При покупке 2 кг пломбира, добавим
         в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
         <a class="banner-btn" href="#">Хочу шоколадки!</a>
     </section>
@@ -80,32 +118,52 @@
     <ul class="hits-list">
       <li class="hits-list-item">
         <article class="hits-item">
-          <div class="hits-image">
-            <img src="http://placehold.it/150x100" alt="Хиты">
+          <div class="hits-image-wrap">
+            <img class="hits-image" src="http://placehold.it/150x100" alt="Хиты">
+          </div>
+          <div class="hits-price">
+            <span class="num">310</span>
+            <span class="rub"></span>
+            <span class="kilo">/кг</span>
           </div>
           <a class="hist-description" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </article>
       </li>
       <li class="hits-list-item">
         <article class="hits-item">
-          <div class="hits-image">
-            <img src="http://placehold.it/150x100" alt="Хиты">
+          <div class="hits-image-wrap">
+            <img class="hits-image" src="http://placehold.it/150x100" alt="Хиты">
+          </div>
+          <div class="hits-price">
+            <span class="num">380</span>
+            <span class="rub"></span>
+            <span class="kilo">/кг</span>
           </div>
           <a class="hist-description" href="#">Сливочно-кофейное с кусочками шоколада</a>
         </article>
       </li>
       <li class="hits-list-item">
         <article class="hits-item">
-          <div class="hits-image">
-            <img src="http://placehold.it/150x100" alt="Хиты">
+          <div class="hits-image-wrap">
+            <img class="hits-image" src="http://placehold.it/150x100" alt="Хиты">
+          </div>
+          <div class="hits-price">
+            <span class="num">355</span>
+            <span class="rub"></span>
+            <span class="kilo">/кг</span>
           </div>
           <a class="hist-description" href="#">Сливочное-клубничное с присыпкой из белого шоколада.</a>
         </article>
       </li>
       <li class="hist-list-item">
         <article class="hits-item">
-          <div class="hits-image">
-            <img src="http://placehold.it/150x100" alt="Хиты">
+          <div class="hits-image-wrap">
+            <img class="hits-image" src="http://placehold.it/150x100" alt="Хиты">
+          </div>
+          <div class="hits-price">
+            <span class="num">415</span>
+            <span class="rub"></span>
+            <span class="kilo">/кг</span>
           </div>
           <a class="hist-description" href="#">Сливочное креб-брюле с карамельной подливкой</a>
         </article>
@@ -114,36 +172,33 @@
   </div>
   <div class="seo-block">
     <h3 class="seo-title">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h3>
-  <div class="seo-desctription-section">
-   <div class="seo-desctription">
-    <p class="seo-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-    </div>
-    <div class="seo-desctription">
-    <p class="seo-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные игридиенты и добавки произведены из натурального, экологически чистого сырья</p>
-    </div>
-  </div>
-  <div class="seo-desctription-section">
-      <div class="seo-desctription">
-        <p class="seo-item">Закупка ингридиентов производиться только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-      </div>
-      <div class="seo-desctription">
-        <p class="seo-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
-    </div>
-  </div>
+   <ul class="seo-list">
+    <li class="seo-item">
+      <p class="seo-decr">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+    </li>
+    <li class="seo-item">
+      <p class="seo-desc">Закупка ингридиентов производиться только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+    </li>
+    <li class="seo-item">
+      <p class="seo-desc">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные игридиенты и добавки произведены из натурального, экологически чистого сырья</p>
+    </li>
+    <li class="seo-item">
+      <p class="seo-desc">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+    </ul>
   </div>
   <div class="news-container">
     <div class="news-block">
-          <span class="news-title">Новое в нашем блоге</span>
-          <ul class="news-list">
-            <li class="news-list">
-              <a href="" class="news-link">10 способов сервировки фруктовых щербетов к столу</a>
-            </li>
-          </ul>
-        </div>
+      <a href="#">
+        <img src="http://placehold.it/150x100" alt="news-block">
+        <span class="news-title">Новое в нашем блоге</span>
+        <span class="news-desc">10 способов сервировки фруктовых щербетов к столу</span>
+      </a>
+    </div>
     <div class="mail-block">
       <p class="mail-desctription">Подпишитесь на нашу сладкую рассылку и будите всегда в курсе самого вкусного, что у нас происходит. Обещаем не спамить и е слать всякой не нужной ерунды. Често =)</p>
       <form class="mail-form" action="/echo" method="post">
-        <input type="text" placeholder="Электронная почта">
+        <input type="text" id="mail-form" placeholder="Электронная почта">
+        <label for="mail-form"></label>
         <input type="submit" value="Отправить">
       </form>
     </div>
@@ -158,7 +213,7 @@
       <span>Для заказов по телефону</span>
       <span>8 812 450-25-25</span>
       <span>(С 10 до 20 ежедневно)</span>
-      <a class="address-block-form" href="#">Форма обратной связи</a>
+      <a class="address-block-btn" href="#">Форма обратной связи</a>
     </div>
   </div>
 </main>
@@ -206,5 +261,15 @@
     </div>
   </div>
 </footer>
+<div class="popup">
+  <span class="popup-title">Мы обязательно вам ответим!</span>
+  <form class="popup-form" action="/echo" method="post">
+    <input class="popup-user" type="text" name="name" id="name" placeholder="Как вас зовут?">
+    <label for="name"></label>
+    <input class="popup-mail" type="text" name="user-mail" id="umail" placeholder="Ваша почта для ответа?">
+    <label for="umail"></label>
+    <textarea class="popup-texxt" name="comment" cols="40" rows="10">Напишите что-нибудь...</textarea>
+  </form>
+</div>
 </body>
 </html>
