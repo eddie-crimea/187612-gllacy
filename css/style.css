@@ -60,11 +60,13 @@ h1 {
 }
 .work-time {
   display: inline-block;
+  vertical-align: top;
   font-size: 14px;
   line-height: 16px;
 }
 .phone-number {
   display: inline-block;
+  vertical-align: top;
   font-size: 22px;
   line-height: 24px;
 }
@@ -76,27 +78,41 @@ h1 {
 /*main-content */
 .slider {
   min-height: 600px;
+  margin-top: -85px;
   margin-bottom: 40px;
   outline: 2px solid yellow;
 }
 .slider-pag-item img {
-  margin-left: 245px;
+  position: absolute;
+  margin-left: 250px;
   margin-right: 250px;
   outline: 2px solid black;
 }
+.slider-pag-list {
+  padding: 0;
+  margin: 0;
+}
 .main-title {
+  position: relative;
+  padding-top: 315px;
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  min-height: 110px;
   font-size: 60px;
   text-align: center;
 }
 .main-btn {
+  position: relative;
   display: block;
   font-size: 32px;
   text-align: center;
 }
 .banner-container {
   width: 1146px;
-  outline: 2px solid yellow;
   margin-bottom: 40px;
+  outline: 2px solid yellow;
 }
 .banner {
   float: left;
@@ -119,6 +135,7 @@ h1 {
   display: inline-block;
   width: 264px;
   margin-right: 25px;
+  vertical-align: top;
   outline: 2px solid black;
 }
 .hits-list-item:nth-child(4) {
@@ -196,6 +213,7 @@ h1 {
 }
 .social-item {
   display: inline-block;
+  vertical-align: top;
 }
 .footer-info {
   float: left;
@@ -206,6 +224,7 @@ h1 {
 }
 .info-item {
   display: inline-block;
+  vertical-align: top;
 }
 .footer-copyright {
   float: left;
@@ -217,6 +236,7 @@ h1 {
 
 .breadcrumbs-item {
   display: inline-block;
+  vertical-align: top;
 }
 h1 {
   font-size: 35px;
@@ -224,6 +244,7 @@ h1 {
 }
 .sort-block, .price-controls, .price-filter, .radio-section {
   display: inline-block;
+  vertical-align: top;
   margin-bottom: 35px;
 }
 .checkbox-section {
@@ -244,6 +265,7 @@ h1 {
   width: 264px;
   margin-right: 25px;
   margin-bottom: 40px;
+  vertical-align: top;
   outline: 2px solid black;
 }
 .gallery-list-item:nth-child(4n) {
@@ -258,10 +280,12 @@ h1 {
   min-height: 30px;
   margin-left: 950px;
   margin-bottom: 30px;
+  vertical-align: top;
   outline: 2px solid yellow;
 }
 .pag-item {
   display: inline-block;
+  vertical-align: top;
 }
 .pag-list {
   margin: 0;
