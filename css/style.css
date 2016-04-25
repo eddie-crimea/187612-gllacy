@@ -45,6 +45,7 @@ h1 {
   float: right;
   width: 573px;
   min-height: 65px;
+  text-align: right;
   outline: 2px solid yellow;
 }
 .user-block-item {
@@ -73,9 +74,8 @@ h1 {
 /* header-nav-user-block */
 
 /*main-content */
-
-/*не могу понять как правильно разместить элементы слайдера, сделал для видимости на станице */
 .slider {
+  min-height: 600px;
   margin-bottom: 40px;
   outline: 2px solid yellow;
 }
@@ -93,7 +93,6 @@ h1 {
   font-size: 32px;
   text-align: center;
 }
-/*не могу понять как правильно разместить элементы слайдера, сделал для видимости на станице */
 .banner-container {
   width: 1146px;
   outline: 2px solid yellow;
@@ -117,7 +116,7 @@ h1 {
   outline: 2px solid yellow;
 }
 .hits-list-item {
-  display: inline-block;;
+  display: inline-block;
   width: 264px;
   margin-right: 25px;
   outline: 2px solid black;
@@ -173,11 +172,14 @@ h1 {
 .news-block {
   margin-right: 25px;
 }
-/*проблема с выпаданием блока с картой за контейнер*/
 .map-block {
-  width: 1200px;
+  margin: 0 -27px;
   min-height: 430px;
   outline: 2px solid yellow;
+}
+.map img {
+  display: block;
+  max-width: 100%;
 }
 /* footer */
 .main-footer {
@@ -229,7 +231,7 @@ h1 {
 }
 .item-container {
   width: 1146px;
-  min-height: 1050px;
+  min-height: 1055px;
   outline: 2px solid yellow;
   margin-bottom: 90px;
 }
@@ -257,7 +259,6 @@ h1 {
   margin-left: 950px;
   margin-bottom: 30px;
   outline: 2px solid yellow;
-
 }
 .pag-item {
   display: inline-block;
