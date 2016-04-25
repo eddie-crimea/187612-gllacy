@@ -17,7 +17,7 @@ h1 {
   outline: 2px solid green;
 }
 .container {
-  width: 1147px;
+  width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
   outline: 2px solid red;
@@ -95,7 +95,7 @@ h1 {
 }
 /*не могу понять как правильно разместить элементы слайдера, сделал для видимости на станице */
 .banner-container {
-  width: 1147px;
+  width: 1146px;
   outline: 2px solid yellow;
   margin-bottom: 40px;
 }
@@ -111,13 +111,13 @@ h1 {
   padding: 0;
 }
 .hits-block {
-  width: 1147px;
+  width: 1146px;
   min-height: 325px;
   margin-bottom: 40px;
   outline: 2px solid yellow;
 }
 .hits-list-item {
-  float: left;
+  display: inline-block;;
   width: 264px;
   margin-right: 25px;
   outline: 2px solid black;
@@ -129,10 +129,11 @@ h1 {
   margin: 0;
   padding: 0;
 }
-
-/* проблема с внутренними отступами  */
 .seo-block {
-  width: 1147px;
+  width: 1127px;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-bottom: 40px;
   min-height: 305px;
   outline: 2px solid yellow;
@@ -158,7 +159,7 @@ h1 {
   margin: 0;
 }
 .news-container {
-  width: 1147px;
+  width: 1146px;
   min-height: 220px;
   outline: 2px solid yellow;
   margin-bottom: 40px;
@@ -209,4 +210,59 @@ h1 {
   width: 267px;
   min-height: 103px;
   outline: 2px solid yellow;
+}
+/*странтица каталога*/
+
+.breadcrumbs-item {
+  display: inline-block;
+}
+h1 {
+  font-size: 35px;
+  margin-bottom: 35px;
+}
+.sort-block, .price-controls, .price-filter, .radio-section {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.checkbox-section {
+  margin-bottom: 40px;
+}
+.item-container {
+  width: 1146px;
+  min-height: 1050px;
+  outline: 2px solid yellow;
+  margin-bottom: 90px;
+}
+.gallery-list {
+  padding: 0;
+  margin: 0;
+}
+.gallery-list-item {
+  display: inline-block;
+  width: 264px;
+  margin-right: 25px;
+  margin-bottom: 40px;
+  outline: 2px solid black;
+}
+.gallery-list-item:nth-child(4n) {
+  margin-right: 0;
+}
+.fast-view-btn {
+  display: none;
+}
+.pag {
+  display: inline-block;
+  width: 200px;
+  min-height: 30px;
+  margin-left: 950px;
+  margin-bottom: 30px;
+  outline: 2px solid yellow;
+
+}
+.pag-item {
+  display: inline-block;
+}
+.pag-list {
+  margin: 0;
+  padding: 0;
 }
