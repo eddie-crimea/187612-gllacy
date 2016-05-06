@@ -52,6 +52,7 @@ body > input[type="radio"] {
   font-weight: normal;
 }
 .main-nav-link {
+  position: relative;
   display: block;
   padding: 6px 14px;
   margin-top: 18px;
@@ -577,6 +578,8 @@ body > input[type="radio"] {
   left: 0;
   font-size: 45px;
   line-height: 45px;
+  color: #fff;
+  text-decoration: none;
   padding-right: 35px;
   background: url("../img/rub.png") no-repeat 100% 7px;
 }
@@ -585,6 +588,8 @@ body > input[type="radio"] {
   bottom: 70px;
   left: 113px;
   font-size: 30px;
+  color: #fff;
+  text-decoration: none;
 }
 .hits-image-wrap {
   position: relative;
@@ -716,14 +721,23 @@ body > input[type="radio"] {
   text-decoration: underline;
   color: #323232;
  }
- .mail-block {
+ .mail-block-wrapper {
+  float: left;
+  padding: 5px;
+  width: 550px;
   border-radius: 15px;
+  background: #f8f7f4 url("../img/mail_border.png") repeat;
+ }
+ .mail-block {
+  border-radius: 10px;
   background: #f8f7f4;
+  width: 550px;
+  min-height: 210px;
  }
  .mail-desc {
-  display: block;
-  padding-left: 20px;
-  padding-bottom: 30px;
+  margin-top: 31px;
+  padding-left: 22px;
+  padding-bottom: 18px;
   width: 510px;
   font-size: 16px;
   line-height: 22px;
@@ -732,13 +746,12 @@ body > input[type="radio"] {
  }
  .mail-block input[type="text"] {
   padding-left: 10px;
-  margin-right: 10px;
   margin-left: 20px;
   width: 364px;
   height: 40px;
-
   font-size: 16px;
   line-height: 24px;
+  font-weight: normal;
   font-family: "Roboto", "Arial", sans-serif;
   background: #ffffff;
   border: 1px solid #d3d3d2;
@@ -834,7 +847,6 @@ body > input[type="radio"] {
   text-decoration: none;
   border-radius: 50%;
   border: 3px solid rgba(255, 255,255, 0.5);
-
 }
 .social-btn-tw {
  background: url("../img/twitter_logo.svg") no-repeat 50% 50%;
@@ -934,8 +946,20 @@ margin-top: 33px;
   font-weight: normal;
   color: #fefefe;
 }
-.info-link-mod {
+.info-link.info-link-mod {
   font-weight: bold;
+  position: relative;
+ }
+.info-link-mod:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: red;
+  left: -22px;
+  top: 4px;
+  pointer-events: none;
+  background: url("../img/footer_heart.svg") no-repeat;
 }
 .footer-copyright {
   float: left;
@@ -958,27 +982,125 @@ margin-top: 33px;
   text-decoration: underline;
 }
 .footer-made {
-  padding-left: 77px;
+  padding-left: 74px;
 }
 .popup {
   display: none;
 }
+
 /*странтица каталога*/
 
+.main-nav-item .current-page {
+  position: relative;
+  color: #ffffff;
+  background: #d07058;
+  text-decoration: none;
+}
+/*
+.main-nav-link:after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  right: 0;
+  bottom: 0;
+}
+*/
+
+/*стили для корзины */
+
+.basket-catalog {
+  position: relative;
+  display: block;
+  padding: 9px 16px;
+  padding-left: 46px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  text-decoration: none;
+  border-radius: 50px;
+  background: #f7f6f3 url("../img/empty_basket.svg") no-repeat 20% 50%;
+  z-index: 5;
+}
+.basket-catalog:before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 10px;
+  left: 29px;
+  bottom: 13px;
+  background: url("../img/basktet_background.svg") no-repeat 100%;
+  z-index: 10;
+}
+/* стили для корзины */
+
+/* меджду ссылками есть такая штука ">>" как ее разместить, нужно уточнить*/
+.breadcrumbs {
+  margin-top: -18px;
+}
+.breadcrumbs-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+}
 .breadcrumbs-item {
   display: inline-block;
   vertical-align: top;
 }
+.breadcrumbs-link {
+  margin-right: 15px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: #ffffff;
+}
+/* меджду ссылками есть такая штука ">>" как ее разместить, нужно уточнить*/
 h1 {
   font-size: 35px;
-  margin-bottom: 35px;
+  line-height: 41px;
+  margin-top: 4px;
+  font-family: "Roboto" "Arial", sans-serif;
+  margin-bottom: 52px;
+
 }
-.sort-block, .price-controls, .price-filter, .radio-section {
+/* жуткие проблемы с фильтрами, сделал для видимости, но нужны доработки
+   + не знаю как разместить комментарии к каждому фильтру.
+   Все элементы едут */
+.sort-block {
   display: inline-block;
-  vertical-align: top;
-  margin-bottom: 35px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  padding-bottom: 10px;
+  padding-left: 18px;
+ }
+.select-section {
+  padding: 10px 12px;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  background: rgba(248, 247, 244, 0.2);
+  border-radius: 50px;
+  color: #ffffff;
+}
+.select-section:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.option-section {
+  color: #000000;
 }
 /*test price-filter*/
+.price-filter {
+  display: inline-block;
+  margin-left: 10px;
+}
+.price-controls{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+}
 .range-filter {
   width: 218px;
 }
@@ -1015,47 +1137,253 @@ h1 {
   left: 135px;
 }
 /* test price-filter*/
-.checkbox-section {
-  margin-bottom: 40px;
+.radio-section-desc {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
 }
+.radio-section {
+  display: inline-block;
+  padding: 9px 12px;
+  margin-left: 10px;
+  min-width: 395px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  border-radius: 50px;
+  background: rgba(248, 247, 244, 0.2);
+}
+.radio-section label {
+  padding-left: 30px;
+}
+.radio-section .radio-btn {
+  display: none;
+}
+.radio-section .radio-btn + label {
+    display:inline-block;
+    vertical-align:middle;
+    height: 21px;
+    margin-left: 10px;
+    background: url("../img/radio_empty.svg") no-repeat;
+    cursor:pointer;
+}
+.radio-section .radio-btn:checked + label {
+    background: url("../img/radio_on.svg") no-repeat;
+}
+.checkbox-section {
+  display: inline-block;
+  padding: 9px 7px;
+  margin-bottom: 40px;
+  margin-top: 4px;
+  width: 688px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  border-radius: 50px;
+  background: rgba(248, 247, 244, 0.2);
+}
+.checkbox-section label {
+  padding-left: 30px;
+}
+.checkbox-section .checkbox-field {
+  display: none;
+}
+.checkbox-section .checkbox-field + label {
+  display: inline-block;
+  vertical-align: middle;
+  height: 21px;
+  margin-left: 10px;
+  margin-right: 13px;
+  background: url("../img/checkbox_off.svg") no-repeat;
+  cursor: pointer;
+}
+.checkbox-section .checkbox-field:checked + label {
+  background: url("../img/checkbox_on.svg") no-repeat;
+}
+.form-button {
+  display: inline-block;
+  margin-left: 8px;
+}
+.submit-btn {
+  padding: 7px 29px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #ffffff;
+  border-radius: 50px;
+  background: rgba(248, 247, 244, 0.2);
+  border: 2px solid #ffffff;
+}
+.submit-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.submit-btn:active {
+  background: #eaeaea;
+  color: #353535;
+  box-shadow: inset 0 2px 1px rgba(105, 105, 105, 1);
+}
+
+/* жуткие проблемы с фильтрами, сделал для видимости, но нужны доработки
+   + не знаю как разместить комментарии к каждому фильтру.
+   Все элементы едут */
+
+/* вроде бы все хорошо, НО, вопрос касательно цены морожки,
+  если добавлять длинное описание морожки -- цена сьезжает т.к.
+  спозиционированна абслютно. как тут правильно поступить */
+
 .item-container {
   width: 1146px;
   min-height: 1055px;
-  outline: 2px solid yellow;
-  margin-bottom: 90px;
+  margin-bottom: 44px;
 }
 .gallery-list {
   padding: 0;
   margin: 0;
 }
 .gallery-list-item {
+  position: relative;
   display: inline-block;
   width: 264px;
+  text-align: center;
   margin-right: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
   vertical-align: top;
-  outline: 2px solid black;
+  cursor: pointer;
+}
+.gallery-block:hover .fast-view-content {
+  opacity: 1;
+}
+
+/* ховерный бекграуунд не перекрывает нижний товар,
+  если играть с z-index, в этом случае бекграунд
+  перекрывает картинку и все что под ним.
+  + как-то надо при наведении на товар уберать подчеркивание
+    с ссылки, мозгов не хватает :-(*/
+.gallery-block:hover:before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  min-height: 400px;
+  width: 100%;
+  background: white;
+  opacity: 0.2;
+  border-radius: 15px;
+  z-index: 0;
+  pointer-events: none;
+}
+.fast-view-content {
+  position: absolute;
+  left: 20px;
+  bottom: -55px;
+  opacity: 0;
+  padding: 10px 22px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  z-index: 20;
+}
+.fast-view-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.gallery-image {
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+}
+.gallery-image-wrap {
+  margin-bottom: 7px;
 }
 .gallery-list-item:nth-child(4n) {
   margin-right: 0;
 }
+.gallery-link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.gallery-link:hover{
+  color: #ffbc9e;
+ }
 .fast-view-btn {
   display: none;
 }
+
+/* вроде бы все хорошо, НО, вопрос касательно цены морожки,
+  если добавлять длинное описание морожки -- цена сьезжает т.к.
+  спозиционированна абслютно. как тут правильно поступить */
+
 .pag {
-  display: inline-block;
+  position: relative;
   width: 200px;
   min-height: 30px;
   margin-left: 950px;
   margin-bottom: 30px;
-  vertical-align: top;
-  outline: 2px solid yellow;
+  white-space: nowrap;
 }
 .pag-item {
   display: inline-block;
-  vertical-align: top;
 }
 .pag-list {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+.pag-link {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+.pag-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.pag-link:active {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+}
+.pag .pag-prev {
+  background: url("../img/prev.svg") no-repeat 50% 45%;
+  cursor: none;
+  font-size: 0;
+  pointer-events: none;
+  opacity: 0.2;
+}
+.pag .pag-next {
+  font-size: 0;
+  background: url("../img/next.svg") no-repeat 0% 45%;
+}
+.pag .current {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+}
+
+.pag:after {
+  content: "";
+  position: absolute;
+  width: 1145px;
+  right: 0;
+  top: 58px;
+  border: 1px solid rgba(250, 250, 250, 0.3);
+
 }

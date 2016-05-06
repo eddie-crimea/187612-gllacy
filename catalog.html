@@ -11,13 +11,13 @@
     <div class="container clearfix">
       <div class="logo-main">
         <a href="#">GlassyShop
-          <img src="img/logo.svg" width="150" alt="Лого">
+          <img src="img/logo.svg" width="150" height="70" alt="Лого">
         </a>
       </div>
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li class="main-nav-item">
-          <a href="" class="main-nav-link">Каталог</a>
+          <a href="" class="main-nav-link current-page">Каталог</a>
         </li>
         <li class="main-nav-item">
           <a href="" class="main-nav-link">Доставка и оплата</a>
@@ -30,19 +30,19 @@
     <div class="user-block">
       <ul class="user-block-list">
         <li class="user-block-item">
-          <a href="#" class="search-block">Поиск</a>
+          <a href="#" class="search-link">Поиск</a>
         </li>
         <li class="user-block-item">
-          <a href="#" class="login-block">Вход</a>
+          <a href="#" class="login-link">Вход</a>
         </li>
         <li class="user-block-item">
-          <a href="#" class="basket">Корзина-2товара</a>
+          <a href="#" class="basket-catalog">2 товара</a>
         </li>
       </ul>
     </div>
     <div class="info-block">
       <span class="work-time">С 10 до 20, ежедневно</span>
-      <span class="telephone-number">8 812 450-25-25</span>
+      <span class="phone-number">8 812 450-25-25</span>
     </div>
     </div>
   </header>
@@ -66,12 +66,12 @@
             <option class="option-section" value="по жирности">по жирности</option>
           </select>
         </div>
-        <div class="price-controls">
-          <span>Цена:</span>
-          <span>100 руб.</span>
-          <span>-</span>
-          <span>500 руб.</span>
-        </div>
+        <!-- <div class="price-controls"> -->
+          <!-- <span>Цена:</span> -->
+          <!-- <span>100 руб.</span> -->
+          <!-- <span>-</span> -->
+          <!-- <span>500 руб.</span> -->
+        <!-- </div> -->
         <div class="price-filter">
           <div class="range-filter">
             <div class="range-controls">
@@ -83,18 +83,20 @@
             </div>
           </div>
         </div>
+        <!-- <span class="radio-section-desc">Жирность:</span> -->
         <div class="radio-section">
           <input class="radio-btn" type="radio" id="first">
           <label for="first">0%</label>
-          <input class="radio-btn" type="radio" id="second">
+          <input class="radio-btn" type="radio" id="second" checked>
           <label for="second">до 10%</label>
           <input class="radio-btn" type="radio" id="third">
           <label for="third">до 30%</label>
           <input class="radio-btn" type="radio" id="fourth">
           <label for="fourth">выше 30%</label>
         </div>
+        <!-- <span class="checkbox-section-desc">Наполнители</span> -->
         <div class="checkbox-section">
-          <input class="checkbox-field" type="checkbox" name="chocolate" id="choco" checked>
+          <input class="checkbox-field" type="checkbox" name="chokolate" id="choco" checked>
           <label for="choco">шоколадные</label>
           <input class="checkbox-field" type="checkbox" name="sugar" id="sugar" checked>
           <label for="sugar">сахарные присыпки</label>
@@ -104,29 +106,35 @@
           <label for="syrup">сиропы</label>
           <input class="checkbox-field" type="checkbox" name="jam" id="jam">
           <label for="jam">джемы</label>
-          <input class="submit-btn" type="submit" value="Применить">
-        </div>
+         </div>
+          <div class="form-button">
+            <input class="submit-btn" type="submit" value="Применить">
+          </div>
       </form>
+      </div>
       <div class="item-container">
         <div class="items-gallery">
           <ul class="gallery-list">
             <li class="gallery-list-item">
-              <article class="gallery-item">
-                <div class="gallery-image-wrap">
-                  <img class="gallery-image" src="img/product1.jpg" alt="Мороженое" width="265" height="270">
-                </div>
-                <div class="hits-price">
-                  <span class="num">310</span>
-                  <span class="rub"></span>
-                  <span class="kilo">/кг</span>
-                </div>
-                <a href="#" class="gallery-link"> Cливочное с апельсиновым джемом и цитрусовой стружкой</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
-                </div>
-              </article>
+              <div class="gallery-block">
+                <article class="gallery-item">
+                  <div class="gallery-image-wrap">
+                    <img class="gallery-image" src="img/product1.jpg" alt="Мороженое" width="265" height="270">
+                  </div>
+                  <div class="hits-price">
+                    <span class="num">310</span>
+                    <span class="rub"></span>
+                    <span class="kilo">/кг</span>
+                  </div>
+                  <a href="#" class="gallery-link"> Cливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                  <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
+                  </div>
+                </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product2.jpg" alt="Мороженое" width="265" height="270">
@@ -137,12 +145,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочно-кофейное с кусочками шоколада</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product3.jpg" alt="Мороженое" width="265" height="270">
@@ -153,12 +163,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product4.jpg" alt="Мороженое" width="265" height="270">
@@ -169,12 +181,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочное крем-брюле с карамельной подливкой</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+              <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product5.jpg" alt="Мороженое" width="265" height="270">
@@ -185,12 +199,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочное с брусничным джемом</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product6.jpg" alt="Мороженое" width="265" height="270">
@@ -201,12 +217,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочно-черничное с цельными ягодами черники</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+              <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product7.jpg" alt="Мороженое" width="265" height="270">
@@ -217,12 +235,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочно-лимонное с карамельной присыпкой</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product8.jpg" alt="Мороженое" width="265" height="270">
@@ -233,12 +253,13 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочное с шоколадной стружкой</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product9.jpg" alt="Мороженое" width="265" height="270">
@@ -249,12 +270,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочно-ванильное с кусочками шоколада</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product10.jpg" alt="Мороженое" width="265" height="270">
@@ -265,12 +288,14 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочноe с ментоловым сиропом</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product11.jpg" alt="Мороженое" width="265" height="270">
@@ -281,26 +306,29 @@
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочное с кусочками черного шоколада</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
             <li class="gallery-list-item">
+            <div class="gallery-block">
               <article class="gallery-item">
                 <div class="gallery-image-wrap">
                   <img class="gallery-image" src="img/product12.jpg" alt="Мороженое" width="265" height="270">
                 </div>
                 <div class="hits-price">
-                  <span class="num">310</span>
+                  <span class="num">420</span>
                   <span class="rub"></span>
                   <span class="kilo">/кг</span>
                 </div>
                 <a href="#" class="gallery-link">Сливочное с мятным сиропом</a>
-                <div class="fast-view-btn">
-                  <a href="#">Быстрый просмотр</a>
+                <div class="fast-view-content">
+                  <a class="fast-view-link" href="#">Быстрый просмотр</a>
                 </div>
               </article>
+              </div>
             </li>
           </ul>
         </div>
@@ -308,10 +336,10 @@
       <div class="pag">
         <ul class="pag-list">
           <li class="pag-item">
-            <a href="#" class="pag-prev">Назад</a>
+            <a href="#prev" class="pag-link pag-prev">Назад</a>
           </li>
           <li class="pag-item">
-            <a href="#" class="pag-link">1</a>
+            <a href="#" class="pag-link current">1</a>
           </li>
           <li class="pag-item">
             <a href="#" class="pag-link">2</a>
@@ -326,7 +354,7 @@
             <a href="#" class="pag-link">5</a>
           </li>
           <li class="pag-item">
-            <a href="#" class="pag-next">Вперед</a>
+            <a href="#next" class="pag-link pag-next">Вперед</a>
           </li>
         </ul>
       </div>
@@ -370,9 +398,11 @@
     </div>
     <div class="footer-copyright">
       <div class="footer-logo">
-        <a href="#">Лого</a>
+        <a href="#">Лого
+          <img src="img/footer_logo.svg" alt="footer-logo" width="110" height="40">
+        </a>
       </div>
-      <span class="footer-made">Сделано в <a href="https://htmlacademy.ru"><span class="footer-url">HTML Academy</span></a> (c) 2016</span>
+      <span class="footer-made">Сделано в <a class="footer-link-mod" href="https://htmlacademy.ru"><span class="footer-url">HTML Academy</span></a> © 2016</span>
     </div>
   </div>
 </footer>
