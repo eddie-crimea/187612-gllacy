@@ -10,7 +10,7 @@
   <header class="main-header">
     <div class="container clearfix">
       <div class="logo-main">
-        <a href="#">GlassyShop
+        <a href="index.html">GlassyShop
           <img src="img/logo.svg" width="150" height="70" alt="Лого">
         </a>
       </div>
@@ -30,10 +30,38 @@
     <div class="user-block">
       <ul class="user-block-list">
         <li class="user-block-item">
-          <a href="#" class="search-link">Поиск</a>
+          <div class="search-block">
+            <a href="#" class="search-link">Поиск</a>
+              <div class="search-dropdown-content">
+                <form action="/echo">
+                  <input class="search-form" type="text" placeholder="Что ищем?" id="search">
+                  <label for="search"></label>
+                </form>
+              </div>
+          </div>
         </li>
         <li class="user-block-item">
-          <a href="#" class="login-link">Вход</a>
+          <div class="login-block">
+            <a href="#" class="login-link">Вход</a>
+            <div class="login-dropdown-content">
+              <form class="login-form" action="/echo">
+                <input type="text" name="email" id="email" placeholder="Электронная почта">
+                <label for="email"></label>
+                <input type="password" name="password" id="pass" placeholder="Пароль">
+                <label for="pass"></label>
+                <input class="login-btn" type="submit" value="Войти" id="login">
+                <label for="login"></label>
+                <ul class="users-help-list">
+                  <li class="users-help-item">
+                    <a class="users-help-link" href="#">Забыли пароль?</a>
+                  </li>
+                  <li class="users-help-item">
+                    <a class="users-help-link" href="#">Новая регистрация</a>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
         </li>
         <li class="user-block-item">
           <a href="#" class="basket-catalog">2 товара</a>
@@ -49,14 +77,15 @@
   <main class="container clearfix">
     <div class="breadcrumbs">
       <ul class="breadcrumbs-list">
-        <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
+        <li class="breadcrumbs-item"><a href="index.html" class="breadcrumbs-link">Главная</a></li>
         <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Каталог</a></li>
-        <li class="breadcrumbs-item"><a class="breadcrumbs-link">Сливочное</a></li>
+        <li class="breadcrumbs-item"><a class="breadcrumbs-link current">Сливочное</a></li>
       </ul>
     </div>
     <h1 class="section-titile">Сливочное мороженое</h1>
     <div class="filter-container">
       <form action="/echo" method="post">
+        <div class="filter-block-wrapp">
         <div class="sort-block">
           <span class="sort-name">Сортировка:</span>
           <select class="select-section" name="sort">
@@ -66,12 +95,12 @@
             <option class="option-section" value="по жирности">по жирности</option>
           </select>
         </div>
-        <!-- <div class="price-controls"> -->
-          <!-- <span>Цена:</span> -->
-          <!-- <span>100 руб.</span> -->
-          <!-- <span>-</span> -->
-          <!-- <span>500 руб.</span> -->
-        <!-- </div> -->
+        <div class="price-controls">
+          <span>Цена:</span>
+          <span>100 руб.</span>
+          <span>-</span>
+          <span>500 руб.</span>
+        </div>
         <div class="price-filter">
           <div class="range-filter">
             <div class="range-controls">
@@ -83,8 +112,10 @@
             </div>
           </div>
         </div>
-        <!-- <span class="radio-section-desc">Жирность:</span> -->
-        <div class="radio-section">
+         <div>
+            <span class="radio-section-desc">Жирность:</span>
+          </div>
+          <div class="radio-section">
           <input class="radio-btn" type="radio" id="first">
           <label for="first">0%</label>
           <input class="radio-btn" type="radio" id="second" checked>
@@ -94,7 +125,11 @@
           <input class="radio-btn" type="radio" id="fourth">
           <label for="fourth">выше 30%</label>
         </div>
-        <!-- <span class="checkbox-section-desc">Наполнители</span> -->
+        </div>
+        <div>
+        <div>
+          <span class="checkbox-section-desc">Наполнители:</span>
+        </div>
         <div class="checkbox-section">
           <input class="checkbox-field" type="checkbox" name="chokolate" id="choco" checked>
           <label for="choco">шоколадные</label>
@@ -109,6 +144,7 @@
          </div>
           <div class="form-button">
             <input class="submit-btn" type="submit" value="Применить">
+          </div>
           </div>
       </form>
       </div>
@@ -382,7 +418,7 @@
       <div class="footer-info-block">
         <ul class="info-list">
           <li class="info-item">
-            <a href="#" class="info-link">Для поставщиков</a>
+            <a href="#" class="info-link info-link-mod">Для поставщиков</a>
           </li>
           <li class="info-item">
             <a href="#" class="info-link">О производстве</a>

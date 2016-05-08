@@ -290,14 +290,17 @@
 </div>
 </div>
 <div class="popup">
+  <button class="popup-content-close" type="button" title="Закрыть">Закрыть</button>
   <span class="popup-title">Мы обязательно вам ответим!</span>
   <form class="popup-form" action="/echo" method="post">
-    <input class="popup-user" type="text" name="name" id="name" placeholder="Как вас зовут?">
+    <input class="popup-user-field" type="text" name="name" id="name" placeholder="Как вас зовут?">
     <label for="name"></label>
-    <input class="popup-mail" type="text" name="user-mail" id="umail" placeholder="Ваша почта для ответа?">
+    <input class="popup-mail-field" type="text" name="user-mail" id="umail" placeholder="Ваша почта для ответа?">
     <label for="umail"></label>
-    <textarea class="popup-texxt" name="comment" cols="40" rows="10">Напишите что-нибудь...</textarea>
-  </form>
-</div>
+    <textarea class="popup-text-field" name="comment" cols="30" rows="6">Напишите что-нибудь...</textarea>
+    <input class="popup-btn" type="submit" value="Отправить">
+    </form>
+    </div>
+    <div class="popup-overlay"></div>
 </body>
 </html>
