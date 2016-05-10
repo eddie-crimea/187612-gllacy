@@ -2,36 +2,46 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Магазин Глейси</title>
 </head>
 <body>
+  <input type="radio" id="btn-1" name="toggle" checked>
+  <input type="radio" id="btn-2" name="toggle">
+  <input type="radio" id="btn-3" name="toggle">
+  <div class="site-wrapper">
   <header class="main-header">
     <div class="container clearfix">
     <h1 class="logo-main">GlassyShop
-        <img src="img/logo.svg" width="160" height="70" alt="Лого">
+        <img src="img/logo.svg" width="150" height="70" alt="Лого">
     </h1>
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li class="main-nav-item">
-          <div class="catalog-block">
-            <a href="" class="main-nav-link"><span class="dropbtn">Каталог</span></a>
-            <div class="catalog-dropdown">
+          <div class="dropdown">
+            <a class="dropbtn trans-mod" href="#">
+              <span>Каталог</span>
+            </a>
               <div class="dropdown-content">
-                <a href="#" class="dropdown-link">Новинки</a>
-                <a href="#" class="dropdown-link">Сливочное</a>
+                <a href="#" class="dropdown-link novelty-mod">Новинки</a>
+                <a href="catalog.html" class="dropdown-link">Сливочное</a>
                 <a href="#" class="dropdown-link">Щербеты</a>
                 <a href="#" class="dropdown-link">Фруктовый лед</a>
                 <a href="#" class="dropdown-link">Мелорин</a>
               </div>
             </div>
-          </div>
         </li>
         <li class="main-nav-item">
-          <a href="" class="main-nav-link">Доставка и оплата</a>
+          <a href="" class="main-nav-link trans-mod">
+            <span>Доставка и оплата</span>
+          </a>
         </li>
         <li class="main-nav-item">
-          <a href="" class="main-nav-link">О Компании</a>
+          <a href="" class="main-nav-link trans-mod">
+          <span>О Компании</span>
+          </a>
         </li>
       </ul>
     </nav>
@@ -40,9 +50,9 @@
         <li class="user-block-item">
           <div class="search-block">
             <a href="#" class="search-link">Поиск</a>
-              <div class="search-dropdown">
-                <form class="search-form" action="/echo">
-                  <input type="text" placeholder="Что ищем?" id="search">
+              <div class="search-dropdown-content">
+                <form action="/echo">
+                  <input class="search-form" type="text" placeholder="Что ищем?" id="search">
                   <label for="search"></label>
                 </form>
               </div>
@@ -51,13 +61,13 @@
         <li class="user-block-item">
           <div class="login-block">
             <a href="#" class="login-link">Вход</a>
-            <div class="login-dropdown">
+            <div class="login-dropdown-content">
               <form class="login-form" action="/echo">
-                <input type="text" id="email" placeholder="Электронная почта">
+                <input type="text" name="email" id="email" placeholder="Электронная почта">
                 <label for="email"></label>
-                <input type="password" id="pass" placeholder="Пароль">
+                <input type="password" name="password" id="pass" placeholder="Пароль">
                 <label for="pass"></label>
-                <input type="submit" value="Войти" id="login">
+                <input class="login-btn" type="submit" value="Войти" id="login">
                 <label for="login"></label>
                 <ul class="users-help-list">
                   <li class="users-help-item">
@@ -72,7 +82,7 @@
           </div>
         </li>
         <li class="user-block-item">
-          <a href="#" class="basket">Корзина-Пусто</a>
+          <a href="#" class="basket">Пусто</a>
         </li>
       </ul>
     </div>
@@ -86,25 +96,34 @@
     <div class="slider">
      <ul class="slider-pag-list">
       <li class="slider-pag-item">
-        <img src="img/icecream_main.png" width="650" height="585" alt="icecream">
-        <h2 class="main-title">Крем брюле и пломбир с малиновым джемом</h2>
-        <div class="main-btn">
-          <a href="#" class="get-btn">Давайте оба!</a>
+        <div class="slide" id="slide1">
+          <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+            <a class="slide-btn" href="#" class="get-btn">Давайте оба!</a>
         </div>
-        <a href="#" class="slider-pag-link">slider-page-1</a>
       </li>
       <li class="slider-pag-item">
-        <a href="#" class="slider-pag-link">slider-page-2</a>
+        <div class="slide" id="slide2">
+          <div class="slide-title">Шоколадный пломбир и лиммоный сорбет</div>
+            <a class="slide-btn" href="#" class="get-btn">Давайте оба!</a>
+        </div>
       </li>
       <li class="slider-pag-item">
-        <a href="#" class="slider-pag-link">slider-page-3</a>
+        <div class="slide" id="slide3">
+          <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+            <a class="slide-btn" href="#" class="get-btn">Давайте оба!</a>
+        </div>
       </li>
     </ul>
+    <div class="slider-controls">
+    <label for="btn-1"></label>
+    <label for="btn-2"></label>
+    <label for="btn-3"></label>
+  </div>
   </div>
   <div class="banner-container clearfix">
     <section class="banner">
       <div class="banner-wrap">
-        <img class="banner-image" src="img/banner1.jpg" alt="banner" width="560" height="230">
+        <img class="banner-image" src="img/banner1.jpg" alt="Баннер" width="560" height="230">
       </div>
       <h2 class="banner-title">Малинка даром!</h2>
         <p class="banner-desc">При покупке 2 кг любого фруктового мороженного, добавим
@@ -113,10 +132,10 @@
     </section>
     <section class="banner">
     <div class="banner-wrap">
-      <img class="banner-image" src="img/banner2.jpg" alt="banner" width="560" height="230">
+      <img class="banner-image" src="img/banner2.jpg" alt="Баннер" width="560" height="230">
     </div>
       <h2 class="banner-title">Шоколадки даром!</h2>
-        <p class="banner-desс">При покупке 2 кг пломбира, добавим
+        <p class="banner-desc">При покупке 2 кг пломбира, добавим
         в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
         <a class="banner-btn" href="#">Хочу шоколадки!</a>
     </section>
@@ -133,7 +152,9 @@
             <span class="rub"></span>
             <span class="kilo">/кг</span>
           </div>
-          <a class="hist-description" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <a class="hits-desc trans-mod" href="#">
+            <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+          </a>
         </article>
       </li>
       <li class="hits-list-item">
@@ -146,7 +167,9 @@
             <span class="rub"></span>
             <span class="kilo">/кг</span>
           </div>
-          <a class="hist-description" href="#">Сливочно-кофейное с кусочками шоколада</a>
+          <a class="hits-desc trans-mod" href="#">
+            <span>Сливочно-кофейное с кусочками шоколада</span>
+          </a>
         </article>
       </li>
       <li class="hits-list-item">
@@ -159,7 +182,9 @@
             <span class="rub"></span>
             <span class="kilo">/кг</span>
           </div>
-          <a class="hist-description" href="#">Сливочное-клубничное с присыпкой из белого шоколада.</a>
+          <a class="hits-desc trans-mod" href="#">
+            <span>Сливочное-клубничное с присыпкой из белого шоколада.</span>
+          </a>
         </article>
       </li>
       <li class="hits-list-item">
@@ -172,7 +197,9 @@
             <span class="rub"></span>
             <span class="kilo">/кг</span>
           </div>
-          <a class="hist-description" href="#">Сливочное креб-брюле с карамельной подливкой</a>
+          <a class="hits-desc trans-mod" href="#">
+            <span>Сливочное креб-брюле с карамельной подливкой</span>
+          </a>
         </article>
       </li>
     </ul>
@@ -181,42 +208,48 @@
     <h3 class="seo-title">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного собственного производства на развес</h3>
    <ul class="seo-list">
     <li class="seo-item">
+      <div class="seo-image-one"></div>
       <p class="seo-desc">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
     </li>
     <li class="seo-item">
+     <div class="seo-image-two"></div>
       <p class="seo-desc">Закупка ингридиентов производиться только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
     </li>
     <li class="seo-item">
+     <div class="seo-image-three"></div>
       <p class="seo-desc">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные игридиенты и добавки произведены из натурального, экологически чистого сырья</p>
     </li>
     <li class="seo-item">
+     <div class="seo-image-four"></div>
       <p class="seo-desc">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
     </ul>
   </div>
   <div class="news-container clearfix">
     <div class="news-block">
       <a href="#">
-        <img src="img/news.jpg" alt="news-block">
+        <img src="img/news.jpg" alt="Блок-новостей" width="560" height="220">
         <span class="news-title">Новое в нашем блоге</span>
         <span class="news-desc">10 способов сервировки фруктовых щербетов к столу</span>
       </a>
     </div>
-    <div class="mail-block ">
-      <p class="mail-desctription">Подпишитесь на нашу сладкую рассылку и будите всегда в курсе самого вкусного, что у нас происходит. Обещаем не спамить и е слать всякой не нужной ерунды. Често =)</p>
+    <div class="mail-block-wrapper">
+     <div class="mail-block">
+      <p class="mail-desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
       <form class="mail-form" action="/echo" method="post">
         <input type="text" id="mail-form" placeholder="Электронная почта">
         <label for="mail-form"></label>
-        <input type="submit" value="Отправить">
+        <input class="mail-form-btn" type="submit" value="Отправить">
       </form>
     </div>
   </div>
+  </div>
   <div class="map-block">
     <div class="map">
-      <img src="img/map.jpg" alt=Карта>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1462888407703" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="adress-block">
       <span>Адрес глафного офиса и офлайн магазина.</span>
-      <span>ул. Большая Конюшенная 19/8, Санкт-Питербург</span>
+      <span class="adress-block-element">ул. Большая Конюшенная 19/8, Санкт-Питербург</span>
       <span>Для заказов по телефону</span>
       <span>8 812 450-25-25</span>
       <span>(С 10 до 20 ежедневно)</span>
@@ -246,37 +279,51 @@
       <div class="footer-info-block">
         <ul class="info-list">
           <li class="info-item">
-            <a href="#" class="info-link">Для поставщиков</a>
+            <a href="#" class="info-link trans-mod info-link-mod">
+            <span>Для поставщиков</span>
+            </a>
           </li>
           <li class="info-item">
-            <a href="#" class="info-link">Наши документы</a>
+            <a href="#" class="info-link trans-mod">
+              <span>Наши документы</span>
+            </a>
           </li>
-        </ul>
-        <div class="footer-info-block">
-          <ul class="info-list">
-            <li class="info-item"><a href="#" class="info-link">О производстве</a></li>
-            <li class="info-item"><a href="#" class="info-link">Экологические стандарты</a></li>
+            <li class="info-item"><a href="#" class="info-link trans-mod">
+             <span>О производстве</span>
+            </a>
+            </li>
+            <li class="info-item"><a href="#" class="info-link trans-mod">
+              <span>Экологические стандарты</span>
+            </a>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
     <div class="footer-copyright">
       <div class="footer-logo">
-        <a href="#">Лого</a>
+        <a href="#">Лого
+          <img src="img/footer_logo.svg" alt="Footer-logo" width="110" height="40">
+        </a>
       </div>
-      <span class="footer-made">Сделано в <a href="https://htmlacademy.ru"><span class="footer-url">HTML Academy</span></a> (c) 2016</span>
+      <span class="footer-made">Сделано в <a class="footer-link-mod trans-mod" href="https://htmlacademy.ru"><span class="footer-url">HTML Academy</span></a> © 2016</span>
     </div>
   </div>
 </footer>
+</div>
+</div>
 <div class="popup">
+  <button class="popup-content-close" type="button" title="Закрыть">Закрыть</button>
   <span class="popup-title">Мы обязательно вам ответим!</span>
   <form class="popup-form" action="/echo" method="post">
-    <input class="popup-user" type="text" name="name" id="name" placeholder="Как вас зовут?">
-    <label for="name"></label>
-    <input class="popup-mail" type="text" name="user-mail" id="umail" placeholder="Ваша почта для ответа?">
-    <label for="umail"></label>
-    <textarea class="popup-texxt" name="comment" cols="40" rows="10">Напишите что-нибудь...</textarea>
-  </form>
-</div>
+    <input class="popup-user-field" type="text" name="user-name" id="name" placeholder="Как вас зовут?" required>
+    <label for="user-name"></label>
+    <input class="popup-mail-field" type="text" name="user-mail" id="umail" placeholder="Ваша почта для ответа?" required=
+    <label for="user-mail"></label>
+    <textarea class="popup-text-field" name="comment" cols="30" rows="6">Напишите что-нибудь...</textarea>
+    <input class="popup-btn" type="submit" value="Отправить">
+    </form>
+    </div>
+    <div class="popup-overlay"></div>
+    <script src="js/popup.js"></script>
 </body>
 </html>
