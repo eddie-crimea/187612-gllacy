@@ -1255,15 +1255,14 @@ margin-top: 33px;
   line-height: 16px;
   font-weight: normal;
   color: #ffffff;
+  text-decoration: none;
 }
-.breadcrumbs-link.trans-mod {
-  color: rgba(255, 255, 255, 0.4);
+.breadcrumbs-link span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-.breadcrumbs-link.trans-mod span {
-  color: rgba(255, 255, 255, 1);
-}
-.breadcrumbs-link.trans-mod:hover span {
+.breadcrumbs-link:hover span {
   color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
 }
 h1 {
   font-size: 35px;
