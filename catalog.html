@@ -17,7 +17,17 @@
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li class="main-nav-item">
-          <a href="" class="main-nav-link current-page">Каталог</a>
+          <div class="dropdown">
+            <a class="dropbtn current-page" href="#">Каталог</a>
+              <div class="dropdown-content">
+                <span class="dropdown-link novelty-mod">Новинки</span>
+                <a href="catalog.html" class="dropdown-link current-link">Сливочное</a>
+                <a href="#" class="dropdown-link">Щербеты</a>
+                <a href="#" class="dropdown-link">Фруктовый лед</a>
+                <a href="#" class="dropdown-link">Мелорин</a>
+              </div>
+            </div>
+        </li>
         </li>
         <li class="main-nav-item">
           <a href="" class="main-nav-link">Доставка и оплата</a>
@@ -85,65 +95,77 @@
     <h1 class="section-titile">Сливочное мороженое</h1>
     <div class="filter-container">
       <form action="/echo" method="post">
-        <div class="filter-block-wrapp">
-        <div class="sort-block">
-          <span class="sort-name">Сортировка:</span>
-          <select class="select-section" name="sort">
-            <option class="option-section" value="со популярности">по популярности</option>
-            <option class="option-section" value="сначала недорогие">сначала недорогие</option>
-            <option class="option-section" value="сначала дорогие">сначала дорогие</option>
-            <option class="option-section" value="по жирности">по жирности</option>
-          </select>
-        </div>
-        <div class="price-controls">
-          <span>Цена:</span>
-          <span>100 руб.</span>
-          <span>-</span>
-          <span>500 руб.</span>
-        </div>
-        <div class="price-filter">
-          <div class="range-filter">
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar"></div>
+        <div class="filter-block-wrap">
+          <div class="block-wrap">
+            <div>
+              <span class="filter-desc">Сортировка:</span>
+            </div>
+            <div class="sort-block">
+            <select class="select-section" name="sort">
+              <option class="option-section" value="со популярности">по популярности</option>
+              <option class="option-section" value="сначала недорогие">сначала недорогие</option>
+              <option class="option-section" value="сначала дорогие">сначала дорогие</option>
+              <option class="option-section" value="по жирности">по жирности</option>
+            </select>
+          </div>
+          </div>
+          <div class="block-wrap">
+            <div class="filter-desc">
+              <span>Цена:</span>
+              <span>100 руб.</span>
+              <span>-</span>
+              <span>500 руб.</span>
+            </div>
+            <div class="price-filter">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
               </div>
-              <div class="toggle min-toggle"></div>
-              <div class="toggle max-toggle"></div>
             </div>
           </div>
         </div>
-         <div>
-            <span class="radio-section-desc">Жирность:</span>
+        <div class="block-wrap">
+          <div class="filter-desc">
+            <span>Жирность:</span>
           </div>
           <div class="radio-section">
-          <input class="radio-btn" type="radio" id="first">
-          <label for="first">0%</label>
-          <input class="radio-btn" type="radio" id="second" checked>
-          <label for="second">до 10%</label>
-          <input class="radio-btn" type="radio" id="third">
-          <label for="third">до 30%</label>
-          <input class="radio-btn" type="radio" id="fourth">
-          <label for="fourth">выше 30%</label>
+            <input class="radio-btn" type="radio" id="first">
+            <label for="first">0%</label>
+            <input class="radio-btn" type="radio" id="second" checked>
+            <label for="second">до 10%</label>
+            <input class="radio-btn" type="radio" id="third">
+            <label for="third">до 30%</label>
+            <input class="radio-btn" type="radio" id="fourth">
+            <label for="fourth">выше 30%</label>
+          </div>
         </div>
         </div>
-        <div>
-        <div>
-          <span class="checkbox-section-desc">Наполнители:</span>
-        </div>
-        <div class="checkbox-section">
-          <input class="checkbox-field" type="checkbox" name="chokolate" id="choco" checked>
-          <label for="choco">шоколадные</label>
-          <input class="checkbox-field" type="checkbox" name="sugar" id="sugar" checked>
-          <label for="sugar">сахарные присыпки</label>
-          <input class="checkbox-field" type="checkbox" name="fruit" id="fruit">
-          <label for="fruit">фрукты</label>
-          <input class="checkbox-field" type="checkbox" name="syrup" id="syrup">
-          <label for="syrup">сиропы</label>
-          <input class="checkbox-field" type="checkbox" name="jam" id="jam">
-          <label for="jam">джемы</label>
-         </div>
-          <div class="form-button">
-            <input class="submit-btn" type="submit" value="Применить">
+        <div class="filter-block-wrap">
+          <div class="block-wrap">
+            <div>
+              <span class="filter-desc">Наполнители:</span>
+            </div>
+            <div class="checkbox-section">
+              <input class="checkbox-field" type="checkbox" name="chokolate" id="choco" checked>
+              <label for="choco">шоколадные</label>
+              <input class="checkbox-field" type="checkbox" name="sugar" id="sugar" checked>
+              <label for="sugar">сахарные присыпки</label>
+              <input class="checkbox-field" type="checkbox" name="fruit" id="fruit">
+              <label for="fruit">фрукты</label>
+              <input class="checkbox-field" type="checkbox" name="syrup" id="syrup">
+              <label for="syrup">сиропы</label>
+              <input class="checkbox-field" type="checkbox" name="jam" id="jam">
+              <label for="jam">джемы</label>
+            </div>
+          </div>
+          <div class="block-wrap">
+            <div class="form-button">
+              <input class="submit-btn" type="submit" value="Применить">
+            </div>
           </div>
           </div>
       </form>
