@@ -231,7 +231,8 @@
   </div>
   <div class="map-block">
     <div class="map">
-      <img src="img/map.jpg" alt=Карта>
+      <!-- <img src="img/map.jpg" alt=Карта> -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1462888407703" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="adress-block">
       <span>Адрес глафного офиса и офлайн магазина.</span>
@@ -293,14 +294,15 @@
   <button class="popup-content-close" type="button" title="Закрыть">Закрыть</button>
   <span class="popup-title">Мы обязательно вам ответим!</span>
   <form class="popup-form" action="/echo" method="post">
-    <input class="popup-user-field" type="text" name="name" id="name" placeholder="Как вас зовут?">
-    <label for="name"></label>
-    <input class="popup-mail-field" type="text" name="user-mail" id="umail" placeholder="Ваша почта для ответа?">
-    <label for="umail"></label>
+    <input class="popup-user-field" type="text" name="user-name" id="name" placeholder="Как вас зовут?" required>
+    <label for="user-name"></label>
+    <input class="popup-mail-field" type="text" name="user-mail" id="umail" placeholder="Ваша почта для ответа?" required=
+    <label for="user-mail"></label>
     <textarea class="popup-text-field" name="comment" cols="30" rows="6">Напишите что-нибудь...</textarea>
     <input class="popup-btn" type="submit" value="Отправить">
     </form>
     </div>
     <div class="popup-overlay"></div>
+    <script src="js/popup.js"></script>
 </body>
 </html>
