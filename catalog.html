@@ -30,10 +30,14 @@
         </li>
         </li>
         <li class="main-nav-item">
-          <a href="" class="main-nav-link">Доставка и оплата</a>
+           <a href="" class="main-nav-link trans-mod">
+            <span>Доставка и оплата</span>
+          </a>
         </li>
         <li class="main-nav-item">
-          <a href="" class="main-nav-link">О Компании</a>
+          <a href="" class="main-nav-link trans-mod">
+          <span>О Компании</span>
+          </a>
         </li>
       </ul>
     </nav>
@@ -87,8 +91,9 @@
   <main class="container clearfix">
     <div class="breadcrumbs">
       <ul class="breadcrumbs-list">
-        <li class="breadcrumbs-item"><a href="index.html" class="breadcrumbs-link">Главная</a></li>
-        <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Каталог</a></li>
+        <li class="breadcrumbs-item">
+          <a href="index.html" class="breadcrumbs-link trans-mod"><span>Главная<span></a></li>
+        <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link trans-mod"><span>Каталог</span></a></li>
         <li class="breadcrumbs-item"><a class="breadcrumbs-link current">Сливочное</a></li>
       </ul>
     </div>
@@ -133,13 +138,13 @@
             <span>Жирность:</span>
           </div>
           <div class="radio-section">
-            <input class="radio-btn" type="radio" id="first">
-            <label for="first">0%</label>
-            <input class="radio-btn" type="radio" id="second" checked>
+            <input class="radio-btn" type="radio" name="radio-button" id="first">
+            <label for="first" class="radio-mod"><span>0%</span></label>
+            <input class="radio-btn" type="radio" name="radio-button" id="second" checked>
             <label for="second">до 10%</label>
-            <input class="radio-btn" type="radio" id="third">
+            <input class="radio-btn" type="radio" name="radio-button" id="third">
             <label for="third">до 30%</label>
-            <input class="radio-btn" type="radio" id="fourth">
+            <input class="radio-btn" type="radio" name="radio-button" id="fourth">
             <label for="fourth">выше 30%</label>
           </div>
         </div>
@@ -441,16 +446,26 @@
       <div class="footer-info-block">
         <ul class="info-list">
           <li class="info-item">
-            <a href="#" class="info-link info-link-mod">Для поставщиков</a>
+           <a href="#" class="info-link trans-mod info-link-mod">
+            <span>Для поставщиков</span>
+            </a>
           </li>
           <li class="info-item">
-            <a href="#" class="info-link">О производстве</a>
-          </li>
+           <a href="#" class="info-link trans-mod">
+              <span>Наши документы</span>
+            </a>
         </ul>
         <div class="footer-info-block">
           <ul class="info-list">
-            <li class="info-item"><a href="#" class="info-link">Наши документы</a></li>
-            <li class="info-item"><a href="#" class="info-link">Экологические стандарты</a></li>
+            <li class="info-item">
+            <a href="#" class="info-link trans-mod">
+             <span>О производстве</span>
+            </a>
+            <li class="info-item">
+              <a href="#" class="info-link trans-mod">
+                <span>Экологические стандарты</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -458,11 +473,10 @@
     <div class="footer-copyright">
       <div class="footer-logo">
         <a href="#">Лого
-          <img src="img/footer_logo.svg" alt="footer-logo" width="110" height="40">
+          <img src="img/footer_logo.svg" alt="Footer-logo" width="110" height="40">
         </a>
       </div>
-      <span class="footer-made">Сделано в <a class="footer-link-mod" href="https://htmlacademy.ru"><span class="footer-url">HTML Academy</span></a> © 2016</span>
-    </div>
+      <span class="footer-made">Сделано в <a class="footer-link-mod trans-mod" href="https://htmlacademy.ru"><span class="footer-url">HTML Academy</span></a> © 2016</span>
   </div>
 </footer>
 </body>

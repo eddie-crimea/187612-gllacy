@@ -1,14 +1,3 @@
-/*tado все "подчеркивания в макете - полупрозрачные, это не есть text-decoradion?
-может это botder-bottom с opacity?" */
-
-/*todo вопросы по стайлгайду - последняя секция - "фильтры, пагинатор..."
-1. нужно в цильтре цены "приглушить цвет не активной зоны, т.е. между
-двумя тоглами светлый цвет - за ними - opacity. Клеить из 4х кусков одну полосу?
-2. заблокированные элементы в фильтрах - нужно ли верстать?
-3. Поля форм - нужно поднимать placeholder выше поля - абсолютные псевдоэлементы? */
-
-
-/*todo по ПП есть несовпадения с размерами-длинной штрифта, непойму почему */
 
 body {
     font: bold 18px/1.2 "Roboto", "Arial", sans-serif;
@@ -68,20 +57,32 @@ body > input[type="radio"] {
   margin-top: 18px;
   border-radius: 50px;
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .main-nav-link:hover {
   background: #f8f7f4;
   color: #000000;
 }
+.main-nav-link span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.main-nav-link:hover span {
+  border-bottom: 1px solid #000000;
+}
 .dropbtn {
   display: block;
   padding: 6px 14px;
-  text-decoration: underline;
   color: #ffffff;
   border: none;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
+}
+.dropbtn span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.dropbtn:hover span {
+  border-bottom: 1px solid #000000;
 }
 .dropdown {
   position: relative;
@@ -629,9 +630,17 @@ body > input[type="radio"] {
   line-height: 22px;
   font-weight: 600;
   color: #ffffff;
+  text-decoration: none;
 }
 .hits-desc:hover {
   color: #ffbc9e;
+}
+.hits-desc span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+.hits-desc:hover span {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
 }
 .seo-block {
   position: relative;
@@ -745,6 +754,9 @@ body > input[type="radio"] {
   line-height: 30px;
   text-decoration: underline;
   color: #323232;
+ }
+ .news-desc:hover {
+  color: #ffbc9e;;
  }
  .mail-block-wrapper {
   float: left;
@@ -971,6 +983,7 @@ margin-top: 33px;
   line-height: 20px;
   font-weight: normal;
   color: #fefefe;
+  text-decoration: none;
 }
 .info-link:hover {
   color: #ffbc9e;
@@ -990,6 +1003,13 @@ margin-top: 33px;
   pointer-events: none;
   background: url("../img/footer_heart.svg") no-repeat;
 }
+.info-link span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.info-link:hover span {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
+}
 .footer-copyright {
   float: left;
   width: 267px;
@@ -1008,13 +1028,14 @@ margin-top: 33px;
 }
 .footer-link-mod {
   color: #fefefe;
-  text-decoration: underline;
+  text-decoration: none;
 }
-.footer-url:hover {
-  color: #ffbc9e;
+.footer-link-mod span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-.footer-link-mod:hover {
+.footer-link-mod:hover span {
   color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
 }
 .footer-made {
   padding-left: 74px;
@@ -1088,6 +1109,12 @@ margin-top: 33px;
   color: #999999;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
+}
+.popup-mail-field:hover,
+.popup-user-field:hover,
+.popup-text-field:hover {
+  border: 2px solid #c7c6c5;
+  padding: 9px 14px;
 }
 .popup-content-close {
   position: absolute;
@@ -1229,6 +1256,15 @@ margin-top: 33px;
   font-weight: normal;
   color: #ffffff;
 }
+.breadcrumbs-link.trans-mod {
+  color: rgba(255, 255, 255, 0.4);
+}
+.breadcrumbs-link.trans-mod span {
+  color: rgba(255, 255, 255, 1);
+}
+.breadcrumbs-link.trans-mod:hover span {
+  color: #ffbc9e;
+}
 h1 {
   font-size: 35px;
   line-height: 41px;
@@ -1305,9 +1341,19 @@ h1 {
   margin-top: 18px;
 }
 .bar{
+  position: relative;
   height: 4px;
   width: 188px;
-  background: #f8f7f4;
+  background: rgba(255,255,255,0.4);
+}
+.bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 37px;
+  width: 93px;
+  height: 100%;
+  background: #ffffff;
 }
 .toggle{
   position: absolute;
@@ -1355,6 +1401,13 @@ h1 {
 .radio-section .radio-btn:checked + label {
     background: url("../img/radio_on.svg") no-repeat;
 }
+.radio-btn:disabled + label {
+  background: url("../img/radio_off_lock.svg") no-repeat;
+}
+.radio-mod span {
+  position: relative;
+  top: 2px;
+}
 .checkbox-section {
   padding: 8px 7px;
   width: 688px;
@@ -1390,6 +1443,9 @@ h1 {
 .checkbox-section .checkbox-field:checked + label {
   background: url("../img/checkbox_on.svg") no-repeat;
 }
+.checkbox-field:disabled + label {
+  background: url("../img/checkbox_lock.svg") no-repeat;
+}
 .submit-btn {
   padding: 7px 29px;
   font-size: 16px;
@@ -1413,7 +1469,7 @@ h1 {
 .item-container {
   width: 1146px;
   min-height: 1055px;
-  margin-bottom: 39px;
+  margin-bottom: 5px;
 }
 .gallery-list {
   padding: 0;
@@ -1425,7 +1481,7 @@ h1 {
   width: 264px;
   text-align: center;
   margin-right: 25px;
-  margin-top: -22px;
+  margin-top: -27px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -1436,25 +1492,25 @@ h1 {
   color: #ffffff;
   border-bottom: 1px solid rgba(255,255,255,0.3);
 }
-.gallery-block:hover {
-  position: relative;
+.gallery-block:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  height: 100%;
+  width: calc(100% + 20px);
+  background: white;
+  opacity: 0;
+  border-radius: 15px;
+  pointer-events: none;
+}
+.gallery-block:hover:before {
+  opacity: 0.2;
   z-index: 10;
 }
 .gallery-block:hover .fast-view-content {
+  position: relative;
+  z-index: 10;
   opacity: 1;
-}
-.gallery-block:hover:before {
-  content: "";
-  position: absolute;
-  display: block;
-  left: -10px;
-  min-height: 400px;
-  width: calc(100% + 20px);
-  background: white;
-  opacity: 0.2;
-  border-radius: 15px;
-  z-index: 0;
-  pointer-events: none;
 }
 .fast-view-content {
   position: relative;
@@ -1464,6 +1520,7 @@ h1 {
 .fast-view-link {
   display: inline-block;
   padding: 10px 22px;
+  margin-bottom: 10px;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   font-weight: bold;
