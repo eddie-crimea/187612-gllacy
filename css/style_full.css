@@ -536,6 +536,7 @@ body > input[type="radio"] {
   padding-left: 18px;
   font-size: 18px;
   line-height: 22px;
+  width: 525px;
 }
 .banner-btn {
   display: inline-block;
