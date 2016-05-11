@@ -239,6 +239,10 @@ body > input[type="radio"] {
   padding: 13px 15px;
   margin: 18px 13px;
 }
+.search-form:focus {
+  border: 1px solid blue;
+  border-radius: 5px;
+}
 .search-block:hover .search-dropdown-content {
   display: block;
   opacity: 1;
