@@ -1069,9 +1069,10 @@ margin-top: 33px;
 }
 .popup {
   position: fixed;
-  top: 38%;
-  left: 720px;
-  width: 431px;
+  top: 36%;
+  right: 37%;
+  width: 430px;
+  margin-left: -215px;
   padding: 20px 25px;
   background: #f8f7f4;
   color: #000000;

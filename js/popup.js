@@ -1,7 +1,8 @@
-var link = document.querySelector(".address-block-btn");
+  var link = document.querySelector(".address-block-btn");
   var popup = document.querySelector(".popup");
   var close = popup.querySelector(".popup-content-close");
   var overlay = document.querySelector(".popup-overlay");
+  var username = popup.querySelector(".popup-user-field")
 
   link.addEventListener("click", function(event) {
     event.preventDefault();
