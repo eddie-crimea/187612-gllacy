@@ -236,11 +236,11 @@ body > input[type="radio"] {
 }
 .search-form:hover {
   border: 2px solid #c7c6c5;
-  padding: 13px 15px;
-  margin: 18px 13px;
+  padding: 13px 14px;
 }
 .search-form:focus {
-  border: 1px solid blue;
+  border: 2px solid #8fbdec;
+  padding: 13px 14px;
   border-radius: 5px;
 }
 .search-block:hover .search-dropdown-content {
@@ -309,6 +309,11 @@ body > input[type="radio"] {
 .login-form input[type="text"]:hover,
 .login-form input[type="password"]:hover {
   border: 2px solid #c7c6c5;
+  padding: 9px 14px;
+}
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border: 2px solid #8fbdec;
   padding: 9px 14px;
 }
 .login-btn {
@@ -760,7 +765,7 @@ body > input[type="radio"] {
   color: #323232;
  }
  .news-desc:hover {
-  color: #ffbc9e;;
+  color: #ffbc9e;
  }
  .mail-block-wrapper {
   float: left;
@@ -784,6 +789,9 @@ body > input[type="radio"] {
   line-height: 22px;
   color: #5a5a5a;
   font-weight: normal;
+ }
+ .mail-form {
+    padding-bottom: 34px;
  }
  .mail-block input[type="text"] {
   padding-left: 10px;
@@ -1158,6 +1166,12 @@ margin-top: 33px;
   border: 2px solid #c7c6c5;
   padding: 9px 14px;
 }
+.popup-mail-field:focus,
+.popup-user-field:focus,
+.popup-text-field:focus {
+  border: 2px solid #8fbdec;;
+  padding: 9px 14px;
+}
 .popup-content-close {
   position: absolute;
   top: 15px;
@@ -1301,11 +1315,16 @@ margin-top: 33px;
   font-weight: normal;
   color: #ffffff;
   text-decoration: none;
-}
-.breadcrumbs-link span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-.breadcrumbs-link:hover span {
+.breadcrumbs-link.current {
+  border: none;
+}
+.breadcrumbs-link.current:hover {
+  border: none;
+  color: #ffffff;
+}
+.breadcrumbs-link:hover {
   color: #ffbc9e;
   border-bottom: 1px solid #ffbc9e;
 }
@@ -1345,10 +1364,39 @@ h1 {
   background: rgba(248, 247, 244, 0.2);
   border-radius: 50px;
   color: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .select-section:hover {
   background: #ffffff;
   color: #000000;
+}
+.sort-block label {
+  position: relative;
+}
+.sort-block label:before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  color: red;
+  left: 150px;
+  top: 16px;
+  background: url("../img/select_marker.svg") no-repeat;
+}
+.sort-block label:hover:before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  left: 150px;
+  top: 16px;
+  background: #ffffff;
+  color: #000000;
+  background: url("../img/select_marker_hover.svg") no-repeat;
+  z-index: 30;
 }
 .option-section {
   color: #000000;

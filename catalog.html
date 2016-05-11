@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Каталог</title>
 </head>
 <body>
@@ -91,8 +91,8 @@
   <main class="container clearfix">
     <div class="breadcrumbs">
       <ul class="breadcrumbs-list">
-        <li class="breadcrumbs-item"><a href="index.html" class="breadcrumbs-link trans-mod"><span>Главная</span></a></li>
-        <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link trans-mod"><span>Каталог</span></a></li>
+        <li class="breadcrumbs-item"><a href="index.html" class="breadcrumbs-link trans-mod">Главная</a></li>
+        <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link trans-mod">Каталог</a></li>
         <li class="breadcrumbs-item"><a class="breadcrumbs-link current">Сливочное</a></li>
       </ul>
     </div>
@@ -105,12 +105,14 @@
               <span class="filter-desc">Сортировка:</span>
             </div>
             <div class="sort-block">
-            <select class="select-section" name="sort">
-              <option class="option-section" value="со популярности">по популярности</option>
-              <option class="option-section" value="сначала недорогие">сначала недорогие</option>
-              <option class="option-section" value="сначала дорогие">сначала дорогие</option>
-              <option class="option-section" value="по жирности">по жирности</option>
-            </select>
+              <label>
+                <select class="select-section" name="sort">
+                  <option class="option-section" value="со популярности">по популярности</option>
+                  <option class="option-section" value="сначала недорогие">сначала недорогие</option>
+                  <option class="option-section" value="сначала дорогие">сначала дорогие</option>
+                  <option class="option-section" value="по жирности">по жирности</option>
+                </select>
+              </label>
           </div>
           </div>
           <div class="block-wrap">
