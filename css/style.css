@@ -1315,7 +1315,6 @@ h1 {
 }
 .filter-block-wrap {
   display: inline-block;
-  /* vertical-align: top; */
   margin-bottom: 10px;
 }
 .block-wrap {
@@ -1332,14 +1331,6 @@ h1 {
   line-height: 16px;
   font-weight: 500;
  }
- /*tado в селект-форме, индикатор выпадашки "стрилочка" верстается псевдоэлементом?  */
- /*todo https://monosnap.com/file/xhVDsF61DxqiwbjXEspfPKfjjJ47Rk отображение в firefox и Opera
- почти идентичны - нужно проиндексировать?*/
-
- /*todo в IE-10 блок с чекбоксами с существующей
- шириной едет на новую строку, если добавить width до 700px, в этом случае - ок
- , но тогда различие в горизонтали в ПП на 12px
- , что в этом случае делаем? https://monosnap.com/file/LL1qATcLdVDjDAdvnifYcvxwCLtYcP */
 .select-section {
   padding: 8px 10px;
   padding-right: 16px;
@@ -1641,7 +1632,6 @@ h1 {
   color: #000000;
   border-radius: 50%;
 }
-
 .pag:after {
   content: "";
   position: absolute;
