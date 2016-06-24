@@ -17,7 +17,6 @@ body > input[type="radio"] {
   width: 1145px;
   margin: 0 auto;
   padding: 0 27px;
-  padding-right: 12px;
 }
 .logo-main img {
   margin-left: -5px;
@@ -391,6 +390,7 @@ body > input[type="radio"] {
 }
 .site-wrapper {
   min-width: 1200px;
+  overflow: hidden;
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
   transition: background-image 0.5s ease, background-color 0.5s ease;
   background-position: top center;
@@ -840,6 +840,7 @@ body > input[type="radio"] {
   position: relative;
   margin: 0 -27px;
   min-height: 430px;
+  overflow: hidden;
 }
 .map img {
   display: block;
@@ -1134,10 +1135,13 @@ margin-top: 33px;
 }
 .popup {
   position: fixed;
-  top: 36%;
-  right: 37%;
-  width: 430px;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 430px;
+  min-height: 420px;
   margin-left: -215px;
+  margin-top: -210px;
   padding: 20px 25px;
   background: #f8f7f4;
   color: #000000;
@@ -1154,10 +1158,13 @@ margin-top: 33px;
   color: #000000;
   font-weight: 600;
 }
+.popup-form {
+  max-width: 90%;
+}
 .popup-mail-field,
 .popup-user-field {
   margin: 10px 0px;
-  width: 235px;
+  width: 100%;
   padding: 10px 15px;
   font-size: 16px;
   line-height: 24px;
@@ -1168,13 +1175,14 @@ margin-top: 33px;
 .popup-text-field {
   padding: 10px 15px;
   margin-top: 6px;
-  width: 385px;
+  width: 100%;
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
   color: #999999;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
+  resize: none;
 }
 .popup-mail-field:hover,
 .popup-user-field:hover,
@@ -1225,6 +1233,7 @@ margin-top: 33px;
   float: right;
   padding: 10px 25px;
   margin-top: 12px;
+  margin-right: -35px;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
